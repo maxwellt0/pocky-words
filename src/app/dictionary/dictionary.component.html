@@ -6,3 +6,30 @@
     </div>
   </form>
 </div>
+
+<div class="col-md-12">
+  <div class="table">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Kanji</th>
+        <th>Hiragana</th>
+        <th>Translation</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let word of words">
+        <td>{{word.kanji}}</td>
+        <td>{{word.hiragana}}</td>
+        <td>{{word.translation}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" (click)="addToDictionary(word.id)">
+            <i class="fa fa-plus" aria-hidden="true"></i> Add
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

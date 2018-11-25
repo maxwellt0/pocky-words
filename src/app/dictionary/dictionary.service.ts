@@ -18,4 +18,10 @@ export class DictionaryService {
     return this.httpClient.get<Word[]>(url, {params: {filter}})
   }
 
+  addWordToDictionary(id: number): Observable<void> {
+    const url = `${SERVER_API_URL}/words/personal`;
+
+    return this.httpClient.post<void>(url, {id});
+  }
+
 }
