@@ -16,6 +16,7 @@
 *.launch
 .settings/
 *.sublime-workspace
+pocky-words.iml
 
 # IDE - VSCode
 .vscode/*
